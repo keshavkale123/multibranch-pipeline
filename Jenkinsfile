@@ -14,10 +14,10 @@ pipeline {
 		}
 		   stage ('git clone') {
 		    steps {
-			  sh "git clone https://github.com/keshavkale123/multibranch-pipeline.git"
+			  sh "git clone https://github.com/keshavkale123/multibranch-pipeline.git -b 23Q1"
 			      }
 				}
-			stage ('main') {
+			stage ('23Q1') {
 			 steps {
               sh "cp -r /mnt/multibranch/multibranch-pipeline/index.html /var/www/html/"
                 sh "chmod -R 777 /var/www/html"
