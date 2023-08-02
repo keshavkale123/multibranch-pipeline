@@ -1,7 +1,7 @@
 pipeline {
 	agent {
 		label {
-		 label ('Built-In') 
+		 label ('Built-in') 
 		  customWorkspace "/mnt/multibranch"
 		  }
 		 }
