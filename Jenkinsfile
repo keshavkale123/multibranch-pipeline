@@ -1,7 +1,7 @@
 pipeline {
 	agent {
 		label {
-		 label (built-in) {
+		 label ('built-in') {
 		  customWorkspace "/mnt/multibranch"
 		  }
 		 }
@@ -12,9 +12,9 @@ pipeline {
 			  sh "git clone https://github.com/keshavkale123/multibranch-pipeline.git"
 			      }
 				}
-			stage ( '' ) {
+			stage ( 'main' ) {
 			 steps {
-              sh "cp -r /mnt/multibranch/multibranch-pipeline/index.html /var/www/html"
+              sh "cp -r /mnt/multibranch/multibranch-pipeline/index.html /var/www/html/"
                 sh "chmod -R 777 /var/www/html"
                   }
 			}
