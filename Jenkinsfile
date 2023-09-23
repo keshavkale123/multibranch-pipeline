@@ -25,7 +25,8 @@ pipeline {
 			} 
 			   stage ('git clone') {
 		    steps { 
-			    dir ("/mnt/multibranch1")
+			    dir ("/mnt/multibranch1") {
+			    }
 			  sh "git clone https://github.com/keshavkale123/multibranch-pipeline.git -b 23Q1"
 			      }
 				}
